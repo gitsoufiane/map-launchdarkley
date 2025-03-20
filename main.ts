@@ -1,3 +1,7 @@
+// Load environment variables from .env file if present
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
@@ -10,8 +14,14 @@ const server = new McpServer({
 });
 
 // Environment variables or configuration for LaunchDarkly API
-const LD_API_KEY = "api-8cb6ebde-cff6-4b12-b276-f1dbd9e76c24"
+const LD_API_KEY = process.env.LD_API_KEY;
 const LD_BASE_URL = 'https://app.launchdarkly.com/api/v2';
+
+// Verify required environment variables
+if (!LD_API_KEY) {
+  console.error('Error: LD_API_KEY environment variable is required');
+  process.exit(1);
+}
 
 // Helper function to make authenticated requests to LaunchDarkly API
 async function ldRequest(endpoint: string, method = 'GET', body?: any) {

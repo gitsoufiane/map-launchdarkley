@@ -29,11 +29,20 @@ An MCP (Model Context Protocol) integration for querying LaunchDarkly feature fl
 
 ## Configuration
 
-Set your LaunchDarkly API key as an environment variable:
+There are two ways to configure the API key:
 
-```bash
-export LD_API_KEY="api-xxxx"
-```
+1. **Environment Variable**:
+   ```bash
+   export LD_API_KEY="api-xxxx"
+   ```
+
+2. **.env File**:
+   - Copy `.env.example` to `.env`
+   - Update the values in the `.env` file
+   ```bash
+   cp .env.example .env
+   # Edit .env with your API key
+   ```
 
 ## Usage
 
