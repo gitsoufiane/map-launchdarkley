@@ -7,7 +7,7 @@ import { spawn } from 'child_process';
 
 async function main() {
   // Start the MCP server
-  const serverProcess = spawn('node', ['dist/main.js'], {
+  const serverProcess = spawn('node', ['dist/index.js'], {
     env: { ...process.env },
     stdio: ['pipe', 'pipe', 'inherit'] // stdin, stdout, stderr
   });

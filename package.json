@@ -2,12 +2,12 @@
   "name": "ldmcp",
   "version": "1.0.0",
   "description": "LaunchDarkly MCP integration for querying feature flags",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/main.js",
-    "dev": "tsc && node dist/main.js"
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
   },
   "keywords": ["launchdarkly", "mcp", "feature-flags"],
   "author": "",
