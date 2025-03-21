@@ -106,16 +106,6 @@ You can configure multiple MCP integrations in Claude Desktop:
                 "LD_API_KEY": "api-xxxxxx"
             }
         },
-        "notion": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@suekou/mcp-notion-server"
-            ],
-            "env": {
-                "NOTION_API_TOKEN": "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"
-            }
-        }
     }
 }
 ```
